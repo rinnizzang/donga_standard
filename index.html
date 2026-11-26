@@ -146,12 +146,28 @@
                     <!-- 좌측: 키링 + 문진 -->
                     <div class="col-span-3 flex flex-col items-center gap-2 z-10 -mr-2">
                         <div class="w-16 h-16 rounded-xl overflow-hidden bg-black shadow-md border border-white/60">
-                            <img src="./keyring.jpg" alt="수평계 키링" class="w-full h-full object-cover"
-                                 onerror="this.src='https://placehold.co/120x120/111111/2298A6?text=Keyring'">
+                            <img src="keyring.jpg" data-base="keyring" alt="수평계 키링" class="w-full h-full object-cover"
+                                 onerror="handleImgFallback(this, 'https://placehold.co/120x120/111111/2298A6?text=Keyring')">
                         </div>
                         <div class="w-20 h-14 rounded-lg overflow-hidden bg-black shadow-lg border border-white/60">
-                            <img src="./%EB%AC%B8%EC%A7%84.jpg" alt="신문문진" class="w-full h-full object-cover"
-                                 onerror="this.src='https://placehold.co/140x100/111111/C5A368?text=Paperweight'">
+                            <img src="paperweight.jpg" data-base="paperweight" data-alt-base="문진" alt="신문문진" class="w-full h-full object-cover"
+                                 onerror="handleImgFallback(this, 'https://placehold.co/140x100/111111/C5A368?text=Paperweight')">
+                        </div>
+                    </div>
+
+                    <!-- 중앙: 보도 일력 -->
+                    <div class="col-span-6 flex justify-center z-0">
+                        <div class="w-full h-36 rounded-xl overflow-hidden bg-black shadow-lg border border-white/60">
+                            <img src="calendar.jpg" data-base="calendar" alt="보도 일력" class="w-full h-full object-cover"
+                                 onerror="handleImgFallback(this, 'https://placehold.co/240x180/111111/2298A6?text=Calendar')">
+                        </div>
+                    </div>
+
+                    <!-- 우측: 동아X그랑핸드 사쉐 -->
+                    <div class="col-span-3 flex justify-center z-10 -ml-2">
+                        <div class="w-20 h-28 rounded-xl overflow-hidden bg-black shadow-md border border-white/60">
+                            <img src="granghand.jpg" data-base="granghand" alt="동아X그랑핸드 사쉐" class="w-full h-full object-cover object-bottom"
+                                 onerror="handleImgFallback(this, 'https://placehold.co/120x160/111111/D7B98E?text=Sachet')">
                         </div>
                     </div>
 
@@ -229,8 +245,8 @@
 
                     <!-- 상품 이미지 -->
                     <div class="w-28 h-28 sm:w-32 sm:h-32 my-3 rounded-lg overflow-hidden bg-black flex items-center justify-center shadow-inner">
-                        <img src="./keyring.jpg" alt="수평계 키링" class="w-full h-full object-contain"
-                             onerror="this.src='https://placehold.co/240x240/000000/2298A6?text=Keyring'">
+                        <img src="keyring.jpg" data-base="keyring" alt="수평계 키링" class="w-full h-full object-contain"
+                             onerror="handleImgFallback(this, 'https://placehold.co/240x240/000000/2298A6?text=Keyring')">
                     </div>
 
                     <!-- 가격 표시 (인증 전에도 원가 취소선 + 30% 할인가 표시) -->
@@ -254,8 +270,8 @@
 
                     <!-- 상품 이미지 -->
                     <div class="w-28 h-28 sm:w-32 sm:h-32 my-3 rounded-lg overflow-hidden bg-black flex items-center justify-center shadow-inner">
-                        <img src="./%EB%AC%B8%EC%A7%84.jpg" alt="신문문진" class="w-full h-full object-contain"
-                             onerror="this.src='https://placehold.co/240x240/000000/C5A368?text=Paperweight'">
+                        <img src="paperweight.jpg" data-base="paperweight" data-alt-base="문진" alt="신문문진" class="w-full h-full object-contain"
+                             onerror="handleImgFallback(this, 'https://placehold.co/240x240/000000/C5A368?text=Paperweight')">
                     </div>
 
                     <!-- 가격 표시 (인증 전에도 원가 취소선 + 30% 할인가 표시) -->
@@ -279,8 +295,8 @@
 
                     <!-- 상품 이미지 -->
                     <div class="w-28 h-28 sm:w-32 sm:h-32 my-3 rounded-lg overflow-hidden bg-black flex items-center justify-center shadow-inner">
-                        <img src="./calendar.jpg" alt="보도 일력" class="w-full h-full object-contain"
-                             onerror="this.src='https://placehold.co/240x240/000000/2298A6?text=Calendar'">
+                        <img src="calendar.jpg" data-base="calendar" alt="보도 일력" class="w-full h-full object-contain"
+                             onerror="handleImgFallback(this, 'https://placehold.co/240x240/000000/2298A6?text=Calendar')">
                     </div>
 
                     <!-- 가격 표시 (인증 전에도 원가 취소선 + 30% 할인가 표시) -->
@@ -304,8 +320,8 @@
 
                     <!-- 상품 이미지 -->
                     <div class="w-28 h-28 sm:w-32 sm:h-32 my-3 rounded-lg overflow-hidden bg-black flex items-center justify-center shadow-inner">
-                        <img src="./granghand.jpg" alt="동아X그랑핸드 사쉐" class="w-full h-full object-contain object-bottom"
-                             onerror="this.src='https://placehold.co/240x240/000000/D7B98E?text=Sachet'">
+                        <img src="granghand.jpg" data-base="granghand" alt="동아X그랑핸드 사쉐" class="w-full h-full object-contain object-bottom"
+                             onerror="handleImgFallback(this, 'https://placehold.co/240x240/000000/D7B98E?text=Sachet')">
                     </div>
 
                     <!-- 가격 표시 (인증 전에도 원가 취소선 + 30% 할인가 표시) -->
@@ -489,6 +505,33 @@
     </div>
 
     <script>
+        // 확장자 대소문자(.jpg/.JPG/.jpeg/.png) 및 macOS 한글 NFD 인코딩 자동 탐색 함수
+        function handleImgFallback(imgEl, placeholderUrl) {
+            const exts = ['JPG', 'jpeg', 'JPEG', 'png', 'PNG'];
+            const base = imgEl.dataset.base;
+            const altBase = imgEl.dataset.altBase;
+            let step = parseInt(imgEl.dataset.step || '0', 10);
+
+            const candidates = [];
+            if (base) {
+                exts.forEach(ext => candidates.push(`${base}.${ext}`));
+            }
+            if (altBase) {
+                ['jpg', ...exts].forEach(ext => {
+                    candidates.push(`${encodeURIComponent(altBase.normalize('NFC'))}.${ext}`);
+                    candidates.push(`${encodeURIComponent(altBase.normalize('NFD'))}.${ext}`);
+                });
+            }
+
+            if (step < candidates.length) {
+                imgEl.dataset.step = step + 1;
+                imgEl.src = candidates[step];
+            } else {
+                imgEl.onerror = null;
+                imgEl.src = placeholderUrl;
+            }
+        }
+
         // 굿즈 데이터 정의
         const PRODUCTS = {
             keyring: {
@@ -496,7 +539,8 @@
                 sub: '언제 어디서나 중심을 잡을 수 있도록',
                 title: '수평계 키링',
                 price: 18000,
-                img: './keyring.jpg',
+                base: 'keyring',
+                img: 'keyring.jpg',
                 desc: '동아일보의 시그니처 컬러를 수평계 속에 그대로 담았습니다.\n언제나 중심을 잡는 동아일보의 혼은\n100년간 쌓아온 굳건함에서 나옵니다.\n단단한 기반 위에 쌓아 올린 중심은, 쉽게 흔들릴 수 없습니다.'
             },
             paperweight: {
@@ -504,7 +548,9 @@
                 sub: '소중한 페이지 위에 든든하게',
                 title: '신문문진',
                 price: 45000,
-                img: './%EB%AC%B8%EC%A7%84.jpg',
+                base: 'paperweight',
+                altBase: '문진',
+                img: 'paperweight.jpg',
                 desc: '100년이라는 시간동안 축적된 신뢰는\n결코 쉽게 무너지지 않습니다.\n시간이 지남에 따라 에이징되는 황동 소재와\n겹겹이 쌓인 신문의 이미지를 통해\n동아일보가 쌓아온 시간을 직관적으로 표현합니다.\n지키고 싶은 소중한 한 페이지 위에, 신문진이 함께합니다.'
             },
             calendar: {
@@ -512,7 +558,8 @@
                 sub: '하루 한장, 간편하게 배우는 역사',
                 title: '보도 일력',
                 price: 22000,
-                img: './calendar.jpg',
+                base: 'calendar',
+                img: 'calendar.jpg',
                 desc: '동아일보가 빠짐없이 기록해 온 우리나라의 역사를\n일력에 하루하루 담았습니다.\n잊어서는 안 되는 날이 차곡차곡 달력에 담겨\n우리의 책상 위에 놓이게 됩니다.'
             },
             sachet: {
@@ -520,7 +567,8 @@
                 sub: '방 안에 퍼지는 기분 좋은 향기',
                 title: '동아X그랑핸드 사쉐',
                 price: 18000,
-                img: './granghand.jpg',
+                base: 'granghand',
+                img: 'granghand.jpg',
                 desc: '그랑핸드는 향을 통해 하루를 의식하는 경험을 중시합니다.\n축적되는 시간이 쌓여 일상을 만든다고 믿는 그랑핸드와 함께,\n하루도 빠짐없이 일상 곁을 지킨\n동아일보의 꾸준함과 축적된 시간을 향기에 담았습니다.'
             }
         };
@@ -627,7 +675,15 @@
             const item = PRODUCTS[key];
             if (!item) return;
 
-            document.getElementById('modalProductImg').src = item.img;
+            const modalImg = document.getElementById('modalProductImg');
+            modalImg.dataset.base = item.base;
+            modalImg.dataset.altBase = item.altBase || '';
+            modalImg.dataset.step = '0';
+            modalImg.onerror = function() {
+                handleImgFallback(this, 'https://placehold.co/400x300/000000/2298A6?text=' + encodeURIComponent(item.title));
+            };
+            modalImg.src = item.img;
+
             document.getElementById('modalProductSub').textContent = item.sub;
             document.getElementById('modalProductTitle').textContent = item.title;
             document.getElementById('modalProductDesc').textContent = item.desc;
